@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0">
+	<display-name>login</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	  <servlet>
+	    <servlet-name>login</servlet-name>
+        <servlet-class>mongotest.login</servlet-class>
+     </servlet>
+     
+      <servlet>
+	    <servlet-name>userdetails</servlet-name>
+        <servlet-class>mongotest.userdetails</servlet-class>
+     </servlet>
+     
+     <servlet>
+	    <servlet-name>hospitalregistration</servlet-name>
+        <servlet-class>mongotest.hospitalregistration</servlet-class>
+     </servlet>
+     
+      <servlet>
+	    <servlet-name>patientdetails</servlet-name>
+        <servlet-class>mongotest.patientdetails</servlet-class>
+     </servlet>
+     
+      <servlet>
+	    <servlet-name>dbadmin</servlet-name>
+        <servlet-class>mongotest.dbadmin</servlet-class>
+     </servlet>
+         
+     
+      
+         
+     <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/loginpage</url-pattern>
+     </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>userdetails</servlet-name>
+        <url-pattern>/userdetails</url-pattern>
+     </servlet-mapping>
+     
+      <servlet-mapping>
+        <servlet-name>hospitalregistration</servlet-name>
+        <url-pattern>/hospitalregistration</url-pattern>
+     </servlet-mapping>
+     
+     <servlet-mapping>
+        <servlet-name>patientdetails</servlet-name>
+        <url-pattern>/patientdetails</url-pattern>
+     </servlet-mapping>
+     
+      <servlet-mapping>
+        <servlet-name>dbadmin</servlet-name>
+        <url-pattern>/dbadmin</url-pattern>
+     </servlet-mapping>
+     
+      
+    <mvc:resources mapping="/resources/**" location="/resources/Boot/"  
+	cache-period="31556926"/>
+
+    <mvc:annotation-driven />
+    
+</web-app>
